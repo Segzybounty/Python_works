@@ -95,7 +95,7 @@ plt.show()
 ### Insight 2: 
 Insight 2: The best-paying employers are industrial and tech firms, and a bank closes the top 10
 
-Wärtsilä leads with a median of €136K, followed by Nortal (€131K) and Nitor (€121K), then Wolt (€111K) and Oura Health (€110K). At the other end of the top 10, ICEYE pays €88K and Nordea €86K. The top spot therefore pays about €50K, or more than 1.5 times, what the tenth-placed company pays. For a job seeker, a target list of well-paying employers is a good complement to simply applying wherever there is an opening, though each figure comes from a small number of salary-listed postings and should be checked against current ads.
+Wärtsilä leads with a median of €136K, followed by Nortal (€131K) and Nitor (€121K), then Wolt (€111K) and Oura Health (€110K). At the other end of the top 10, ICEYE pays €88K and Nordea €86K. The top spot therefore pays about €50K, or more than 1.5 times, what the tenth-placed company pays. For a job seeker, a target list of well-paying employers is a good complement to simply applying wherever there is an opening, though each figure comes from a small number of salary-listed postings and should be checked against current ads. 
 
 Top 10 paying companies for analytics roles in Finland
 
@@ -174,7 +174,7 @@ ax = sns.barplot(
     legend=False
 )
 
-# Add value labels
+# Add value labels 
 for container in ax.containers:
     labels = [f'€{v/1000:.0f}K' for v in container.datavalues]
 
