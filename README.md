@@ -48,6 +48,8 @@ Data source. A dataset of roughly 2 million data-related job postings made up of
 - Monthly pattern: a pivot table of skill mentions by calendar month, converted to percentages, for the 6 most mentioned skills.
 - Demand versus pay: a scatter plot of demand against median salary, limited to skills in more than 5% of Data Analyst postings, with adjustText to keep labels readable.
 
+![project Notebook Overview](jobs_Project\project_images\notebook_overview.png) 
+
 ### Limitations to keep in mind.
 - Job postings show what employers advertise, not who was hired.
 Only Data Analyst postings with a listed salary were used for skill pay, which is just 9 postings, and each skill appears in only 1 or 2 of them.
@@ -85,7 +87,7 @@ plt.ylabel('Location')
 plt.tight_layout()
 plt.show()
 ```
-![visualization of job location in finland](jobs_Project\project_images\job_location_image.png)
+![job_location_image](jobs_Project\project_images\job_location_image.png)
 
 plt.show()
 </details>
