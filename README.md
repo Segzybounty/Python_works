@@ -52,9 +52,24 @@ This project answers the following questions:
 ---
 
 # Methodology
+Data Source
+The analysis uses a dataset containing approximately 2 million global data-related job postings. The primary files used were:
+
+- job_postings_fact.csv
+- company_dim.csv
+- job_postings_flat.csv (for skill analysis)
+
+The analysis was limited to postings located in Finland and focused on the following roles:
+
+- Data Analyst
+- Data Scientist
+- Data Engineer
+- Business Analyst
+- Senior Data Analyst
+- Senior Data Engineer
+- Senior Data Scientist
 
 ## Tools
-
 - Python
 - Pandas
 - Matplotlib
@@ -62,6 +77,39 @@ This project answers the following questions:
 - adjustText
 - Jupyter Notebooks
 - Git & GitHub
+
+## Data Cleaning
+Several preprocessing steps were performed before analysis:
+
+- Converted posting dates into datetime format.
+- Created year-based fields for trend exploration.
+- Filtered the dataset to Finland-based data roles only.
+- Removed non-geographic locations such as "Anywhere".
+- Excluded postings listed only as "Finland" without a specific city when performing location analysis.
+- Standardised location labels by removing ", Finland" suffixes.
+- Converted skill-list text into Python objects for skill analysis.
+- Removed records without salary information for salary-focused analyses.
+
+## Analysis Techniques
+The project combines several analytical approaches:
+
+Location Analysis
+Job postings were grouped by city to identify where opportunities are concentrated across Finland.
+
+Salary Analysis
+Median salaries were used instead of averages to reduce the effect of extreme salary values and provide a more representative measure of compensation.
+
+Company Analysis
+Company information was joined using company identifiers to identify the highest-paying employers in Finland's data market.
+
+Skill Demand Analysis
+Skills were extracted and aggregated to identify the most frequently requested technologies across data roles.
+
+Skill Trend Analysis
+Monthly skill demand patterns were analyzed to understand how technology requirements fluctuate throughout the year.
+
+Demand vs Salary Analysis
+Skills were evaluated using both demand frequency and salary information to identify technologies offering strong market demand and competitive compensation.
 
 ## Notebooks
 
@@ -87,7 +135,7 @@ This project answers the following questions:
 
 ## Insight 1: The Capital Region Is Where the Jobs Are
 
-Helsinki is the clear center of Finland's data job market, with approximately 1,700 postings, compared with roughly 445 in Espoo and 105 in Tampere.
+Helsinki is the clear center of Finland's data job market, with approximately 1,700 postings, compared with roughly 445 in Espoo and 105 in Tampere. Postings that listed only "Finland" without a specific city were excluded from the location analysis to ensure that comparisons reflected identifiable geographic locations.
 
 ![Top Locations](jobs_Project/project_images/job_location_image.png)
 
